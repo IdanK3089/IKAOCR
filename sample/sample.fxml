@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="1000.0" prefWidth="1200.0">
+         <children>
+            <TableView fx:id="MainTable" layoutX="65.0" layoutY="262.0" prefHeight="309.0" prefWidth="705.0" style="-fx-alignment: center;">
+              <columns>
+                  <TableColumn fx:id="TotalClm" minWidth="0.0" prefWidth="150.0" resizable="false" style="-fx-text-alignment: center;" text="עלות סך בדיקות" />
+                  <TableColumn fx:id="AmountClm" minWidth="0.0" prefWidth="91.0" resizable="false" style="-fx-text-alignment: center;" text="כמות בדיקות" />
+                <TableColumn fx:id="TestTypeClm" minWidth="0.0" prefWidth="281.0" resizable="false" text="סוג בדיקה" />
+                <TableColumn fx:id="BRKClm" prefWidth="182.0" resizable="false" style="-fx-text-alignment: center;" text="מספר מנה" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="ClientAddBtn1" buttonType="RAISED" defaultButton="true" layoutX="322.0" layoutY="589.0" onAction="#OpenFile" prefHeight="31.0" prefWidth="160.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="פתיחת קובץ ברקודים" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="ClientAddBtn11" buttonType="RAISED" defaultButton="true" layoutX="322.0" layoutY="636.0" onAction="#MakeData" prefHeight="31.0" prefWidth="160.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הכנס ברקודים לטבלה" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="ClientAddBtn111" buttonType="RAISED" defaultButton="true" layoutX="317.0" layoutY="723.0" onAction="#CreateWordFile" prefHeight="31.0" prefWidth="171.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="פתיחת נתונים ב-Word" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="TestTable" layoutX="66.0" layoutY="42.0" prefHeight="136.0" prefWidth="336.0">
+               <columns>
+                  <TableColumn fx:id="TestCostClm" prefWidth="156.0" style="-fx-text-alignment: center;" text="עלות" />
+                  <TableColumn fx:id="TestTypeClmT" minWidth="0.0" prefWidth="156.0" text="סוג הבדיקה" />
+                  <TableColumn fx:id="TestRadioClm" minWidth="0.0" prefWidth="23.0" resizable="false" />
+               </columns>
+            </TableView>
+            <JFXButton fx:id="ClientAddBtn12" buttonType="RAISED" defaultButton="true" layoutX="536.0" layoutY="118.0" onAction="#AddTest" prefHeight="29.0" prefWidth="103.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="הוסף בדיקה" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="TestBox" layoutX="468.0" layoutY="43.0" />
+            <TextField fx:id="PriceBox" layoutX="548.0" layoutY="79.0" prefHeight="23.0" prefWidth="70.0" />
+            <Label layoutX="628.0" layoutY="39.0" prefHeight="31.0" prefWidth="119.0" text="סוג הבדיקה:">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="628.0" layoutY="75.0" prefHeight="31.0" prefWidth="119.0" text="עלות:">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="ClientAddBtn112" buttonType="RAISED" defaultButton="true" layoutX="323.0" layoutY="680.0" onAction="#CalculateCosts" prefHeight="31.0" prefWidth="160.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="חשב עלות בדיקות" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="ClientAddBtn113" buttonType="RAISED" defaultButton="true" layoutX="66.0" layoutY="580.0" onAction="#ClearTbl" prefHeight="31.0" prefWidth="97.0" ripplerFill="WHITE" style="-fx-background-color: #0f5d9a;" text="נקה טבלה" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="489.0" layoutY="589.0" prefHeight="31.0" prefWidth="119.0" text="שלב א:">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="489.0" layoutY="632.0" prefHeight="31.0" prefWidth="119.0" text="שלב ב:">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="490.0" layoutY="680.0" prefHeight="31.0" prefWidth="119.0" text="שלב ג:">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
